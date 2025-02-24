@@ -18,8 +18,4 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 #     && pip install --no-cache-dir pipx \
 #     && pipx reinstall-all
 
-RUN mkdir ai4beg
-
-COPY ./ /ai4beg/ 
-
 ENTRYPOINT ["tail", "-f", "/dev/null"]
