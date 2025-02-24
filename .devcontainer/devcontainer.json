@@ -1,6 +1,6 @@
 {
-  "name": "Miniconda (Python 3)",
-  "image": "mcr.microsoft.com/devcontainers/miniconda",
+  "name": "Intro AI",
+  "image": "ai4beg:v1.0",
   "hostRequirements": { 
     "cpus": 4, 
     "memory": "8gb", 
