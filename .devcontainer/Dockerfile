@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/miniconda:0-3
+FROM mcr.microsoft.com/vscode/devcontainers/miniconda:latest
 
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
 ARG NODE_VERSION="none"
@@ -18,3 +18,8 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 #     && pip install --no-cache-dir pipx \
 #     && pipx reinstall-all
 
+RUN mkdir ai4beg
+
+COPY ./ /ai4beg/ 
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]

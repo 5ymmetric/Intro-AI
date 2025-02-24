@@ -2,6 +2,7 @@ name: ai4beg
 channels:
   - defaults
   - conda-forge
+  - pytorch
 dependencies:
   - ipykernel
   - ipython
@@ -16,9 +17,9 @@ dependencies:
   - pip
   - conda-forge::opencv
   - setuptools
-  - pytorch::pytorch
-  - pytorch::torchtext
-  - pytorch::torchvision
-  - pytorch::torchdata
+  - pytorch
+  - torchtext
+  - torchvision
+  - torchdata
   - pip:
     - -r requirements.txt
