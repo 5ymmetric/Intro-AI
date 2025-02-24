@@ -18,4 +18,16 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 #     && pip install --no-cache-dir pipx \
 #     && pipx reinstall-all
 
+RUN mkdir /quiz
+
+COPY etc/ /quiz/
+
+RUN export NVM_DIR="/usr/local/share/nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node
+
+WORKDIR /quiz/quiz-app
+
+USER root
+
+RUN npm install
+
 ENTRYPOINT ["tail", "-f", "/dev/null"]

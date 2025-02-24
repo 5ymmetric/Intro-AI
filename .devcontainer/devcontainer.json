@@ -29,6 +29,5 @@
     }
   },
   "forwardPorts": [],
-  "postCreateCommand": "conda update conda -y && conda env create -f environment.yml",
-  "remoteUser": "vscode"
+  "remoteUser": "root"
 }
